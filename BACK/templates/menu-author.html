@@ -1,0 +1,30 @@
+<div id="menu-author">
+	<nav>
+		<ul>
+			<li > 	<div class='t1'> Artistes  </div>
+				<ul>
+					{% for author in authorsList %}
+					<li><a href="{{ url_for('index', _external=False) }}author/{{author}}">{{author}}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+
+			<li class='selected'> <div class='t1'> Oeuvres de {{selectedAuthor}}</div>
+				<ul>
+					{% for article in articles %}
+					{% if article.meta.author == selectedAuthor %}
+					<li>
+						<a class='selected' href="{{ url_for('index', _external=False) }}{{article.path}}"> 	<img src="{{ url_for('static', filename='img/' + article.cover) }}" alt="Cover image" >{{article.meta.title}}</a>
+					</li>
+					{% endif %}
+					{% endfor %}
+				</ul>
+			</li>
+
+
+
+
+
+		</ul>
+	</nav>
+</div>

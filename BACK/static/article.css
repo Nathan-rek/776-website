@@ -1,0 +1,321 @@
+body{
+	background-color: black;
+	margin:2px;
+	padding:2px;
+	font-family: 'Whois'; 
+
+}
+
+
+#menu ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+
+#menu li {
+	margin: 0px 5px;
+	flex-grow: 1;
+	text-align: center;
+
+}
+
+#menu a {
+	display: block;
+	padding: 2px;
+	text-decoration: none;
+	font-size: 0.9em;
+	color: white;
+	background-color: black;
+	transition-duration: 0.5s;
+
+
+}
+
+#menu a.home {
+
+
+}
+
+#menu a:hover {
+	color: ghostwhite;
+	border-radius: 5px;
+	background-color: white;
+}
+
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+h4 {
+	font-size: 23px;
+
+	margin: 1px 0px;
+}
+
+h1 {
+
+	margin: 0px 0px 10px 10px
+}
+
+h2 {
+	font-size: 24px;
+
+	margin: 10px;
+}
+
+
+h3 {
+	margin: 0px;
+	font-size: 30px;
+
+}
+
+
+
+img {
+	width:100%;
+	height:auto;
+}
+
+.cartel {
+	display: flex;
+
+	flex-direction: row;
+}
+
+.cartel img {
+	width: auto;
+	max-height: 848px;
+
+}
+
+
+a.menu-btn {
+	color: black;
+	text-decoration: none;
+	transition-duration: 0.8s;
+
+}
+
+a.menu-btn:hover {
+	font-size:  1em;
+	color: white;
+	background-color: black;
+	text-decoration: none;
+	letter-spacing: 5px;
+	margin: 10px;
+}
+
+
+.article {
+	padding: 10px;
+	background-color: black;
+}
+
+
+.article .wdesc h3,
+.article .wdesc h4,
+.article .wdesc h5 {
+	text-align: end;
+	color: white;
+	font-family: 'police2'
+}
+
+.article .wdesc h5 {
+	text-align: end;
+	margin: 0px;
+	font-size: 19px;
+
+}
+
+.wdesc {
+	color: white;
+	background-color: black;
+	width: 100%;
+}
+
+
+p {
+	margin: 0px 0px 0px 10px;
+}
+
+.wdesc img , #gallery img {
+	align-items: center;
+	margin: 5px ;
+	max-width: 100%;
+	height: auto;
+}
+
+video {
+	display: block;
+	margin: 10px;
+	max-width: 100%;
+	height: auto;
+	width: 55%;
+}
+
+
+#gal {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+	grid-gap: 1px;
+	justify-content: center;
+	margin: 1px;
+}
+
+.img_containers {
+	position: relative;
+	overflow: hidden;
+	display: grid;
+	justify-items: center;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+
+.img_containers img{
+	width:100%;
+}
+
+.fullImg{
+	grid-column: span 4;
+	height: auto!important;
+}
+
+.fullImg img{
+	width:70%;
+}
+
+em img, em video{
+
+	display: block;
+	margin: 50px auto;
+	max-width: 100%;
+	height: auto;
+	width: 75%;
+}
+
+em video{
+
+	width: 500px
+}
+
+
+
+em a {
+
+
+	color: black;
+	transition-duration: 0.5s
+}
+em a:hover {
+
+
+	color: white;
+	background-color: black;
+	border-radius: 5px
+}
+
+a {
+	text-decoration: none;
+	padding: 0px;
+}
+
+
+
+ul {
+	list-style: square;
+	margin: 33px 10px;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+
+
+
+@font-face {
+	font-family: "Whois";
+	src:url("../static/font/GARA.TTF") ;
+
+}
+
+
+@font-face {
+	font-family: "police2";
+	src:url("../static/font/GARA.TTF") ;
+
+
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+	#works {
+		display: grid;
+		grid-template-columns: 1fr 1fr ;
+		grid-gap: 1px;
+		justify-content: center;
+		margin: 1px;
+
+	}
+
+
+	#menu ul {
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+	h3 {
+
+		font-size: 0.95em;
+	}
+
+	h5 {
+
+		font-size: 0.5em;
+	}
+
+	h4 {
+
+		font-size: 0.6em;
+	}
+
+	h1 {
+		font-size: 1.2em;
+		margin: 0px 0px 10px 10px
+	}
+
+	.wdesc {
+		font-size: 0.8em;
+	}
+
+	.cartel img {
+
+		width: 100px
+	}
+
+	#menu a {
+		font-size: 0.55em;
+		padding: 3px;
+	}
+
+	.wdesc p {
+		font-size: 0.8em;
+	}
+
+
+
+}

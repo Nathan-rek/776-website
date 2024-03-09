@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+		<title>776</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+
+
+
+		<div class="main">
+			<div class="logo-image"> <a href="http://qamo9384.odns.fr/776/">  <img src="{{ url_for('static', filename='776.png') }}" alt="Logo 776" ></a> </div>	
+
+			<div class="3block">
+				<div class="author-list">
+					{% include 'menu-author.html' %}
+				</div>
+
+
+				<div class="home-image">
+					<a href="http://qamo9384.odns.fr/776/">
+						<img src="{{ url_for('static', filename=random_image) }}" alt="Random Image">
+					</a>
+				</div>
+
+
+
+
+				<!--
+<div class="wimg">
+{% for a in articles %}
+<a href="{{ url_for('page', path=a.path) }}" class="article-link">
+{% if a.meta.cover %}
+<img src="{{ url_for('static', filename='img/' + a.meta.cover) }}" alt="Cover image for {{ a.title }}"/>
+{% else %}
+<img src="{{ url_for('static', filename='img/def.jpg') }}" alt="Default cover image"/>
+{% endif %}
+<div class="wdesc">
+<h1>{{ a.meta.author }}: <i> {{ a.title }}, </i> {{ a.meta.published.strftime('%Y') }}. {{ a.meta.desc }}</h1>
+</div>
+</a>
+{% endfor %}
+</div>
+-->
+				<div class="list-ex">
+					{% include 'menu.html' %}
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<p>Mnrkk fon Sake. D.Decstomson Deekoscsnam or Canm Cnc Caran bakesal Kamerwwn Tlick Taonnt he Ocamma Tanstin or Bark Caamamen ian Dtstmmabent. Cammsbem Oparmritem, Cam Diekho Bean Mmai Dentema bcam the Marm D, Beasanomo with Bachanmuitity.</p>
+		</footer>
+
+
+	</body>
+</html>

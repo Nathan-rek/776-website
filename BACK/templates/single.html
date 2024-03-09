@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="icon" href="/static/logo.png">
+		<title>776</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+		<script src="{{ url_for('static', filename='js/vivus.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+	</head>
+	<body>
+
+
+		<div class="parent">
+			<div class="wimg">
+				{% if page.cover %}
+				<img src="{{ url_for('static', filename='img/' + page.cover) }}"/>
+				{% else %}
+				<img src="{{ url_for('static', filename='img/def.jpg') }}"/>
+				{% endif %}
+			</div>
+			<div class="wdesc">
+				<h1>{{page.author}}: {{page.title}}</h1>
+
+				<h4>{{page.desc}}</h4>
+				<h4>{{page.cat}}</h4>
+				<h5>{{page.published}}</h5>
+				{{page}}
+
+			</div>
+
+			<div class="li2">
+				{% include 'menu-author.html' %}
+
+
+			</div>
+			<div class="li1">
+
+
+				{% include 'menu.html' %}
+
+			</div>
+
+
+			<div class="hban"> <h3> <a class='home' href="/776/">776</a> </h3> </div>
+
+		</div>
+
+
+
+
+		<!--
+<div id="gal">
+{% for img in imgs %}
+<div class="img_container">
+<img src="{{ img }}"/>
+</div>
+{% endfor %}
+
+</div>
+-->
+
+
+
+
+
+
+	</body>
+	<!--
+
+<div class="parent">
+<div class="div1"> </div>
+<div class="div2"> </div>
+<div class="div3"> </div>
+<div class="div4"> </div>
+<div class="div5"> </div>
+</div>
+
+
+.parent {
+display: grid;
+grid-template-columns: repeat(2, 1.5fr) repeat(3, 1fr);
+grid-template-rows: 0.5fr repeat(3, 1fr) 0.5fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 2 / 1 / 5 / 3; }
+.div2 { grid-area: 2 / 3 / 5 / 4; }
+.div3 { grid-area: 1 / 4 / 5 / 6; }
+.div4 { grid-area: 1 / 1 / 2 / 4; }
+.div5 { grid-area: 5 / 1 / 6 / 6; }
+-->
+
+</html>

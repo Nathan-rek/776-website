@@ -1,0 +1,228 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	margin:0px;
+	padding:0px;
+	font-family: 'Whois';
+	background-color: white;
+}
+
+
+.t1 {
+	color: white;
+	font-size: 1.5em;
+}
+
+
+
+#menu ul, #menu-author ul {
+
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	flex-direction: column;
+	align-content: stretch;
+	flex-wrap: nowrap;
+
+}
+
+#menu li, #menu-author li {
+	margin: 0px 5px;
+	flex-grow: 1;
+	text-align: center;
+
+}
+
+#menu a, #menu-author a {
+	border-radius: 2px;
+	display: flex;
+	padding: 2px;
+	text-decoration: none;
+	font-size: 1.1em;
+	color: black;
+	background-color: white;
+	transition-duration: 0.5s;
+	margin: 2px;
+
+
+}
+
+#menu a.home, #menu-author a.home {
+	text-decoration: none;
+
+}
+
+#menu a:hover, #menu-author a:hover {
+	color: ghostwhite;
+	border-radius: 5px;
+	background-color: white;
+}
+
+
+#menu-author li img {
+
+	width: 180px;
+	/*	height: 180px;*/
+	margin: 0px 10px 0px 0px
+}
+
+.selected li {
+
+}
+
+ul#cat-menu-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-end;
+}
+
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+
+.parent {
+	display: grid;
+	grid-template-columns: repeat(2, 1.5fr) repeat(3, 1fr);
+	grid-template-rows: 0.2fr 0.6fr 0.6fr 0.6fr 0.2fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+
+.wimg {	
+	/*	border-radius: 10px;*/
+	/*width: fit-content;*/
+	grid-area: 2 / 1 / 5 / 3;
+	background-color: black; 
+	/*	border: 1px solid white;  Bordure de 2 pixels en couleur grise */
+	/*	height: 750px;*/
+	max-width: 1024px;  
+
+}
+
+.wimg img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain; /* Modifiez cette ligne */
+}
+
+
+
+.li2 {
+	grid-area: 1 / 4 / 5 / 6;
+	border-radius: 10px;
+
+	background-color: black; 
+	border: 1px solid white; /* Bordure de 2 pixels en couleur grise */
+}
+
+.li1 {	grid-area: 1 / 1 / 2 / 4;
+	border-radius: 10px;
+
+	background-color: black; 
+	border: 1px solid white; /* Bordure de 2 pixels en couleur grise */
+}
+
+.wdesc {
+	grid-area: 2 / 3 / 5 / 4;
+	color: white;
+	background-color: black; 
+	border: 1px solid white;
+	border-radius: 10px;
+	padding: 2px;
+}
+
+.hban {
+	grid-area: 5 / 1 / 6 / 6;
+	background-color: black; 
+	border: 1px solid white; 
+	border-radius: 10px;
+}
+
+
+h2 {
+	font-size: 0.7em;
+	margin: 15px 0px 0px 5px;
+	text-decoration: none;
+
+	margin: 1px;
+
+}
+
+h1 {
+	font-size: 0.9em;
+	margin: 15px 0px 0px 5px;
+	font-family: "Whois";
+	text-decoration: none;
+
+}
+
+h3  {
+	text-decoration: none;
+	margin: 15px 0px 0px 5px;
+	font-size: 3.6em;
+	text-align: center;
+	margin: 12px;
+	color: white;
+	font-family: 'police2';
+}
+
+
+#gal {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+	grid-gap: 1px;
+	justify-content: center;
+	margin: 1px;
+}
+
+.img_containers {
+	position: relative;
+	overflow: hidden;
+	display: grid;
+	justify-items: center;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+
+.img_containers img{
+	width:100%;
+}
+
+.fullImg{
+	grid-column: span 4;
+	height: auto!important;
+}
+
+.fullImg img{
+	width:70%;
+}
+
+
+
+@font-face {
+	font-family: "Whois";
+	src:url("../static/font/IBMPlexMono-Light.otf") ;
+
+}
+
+
+@font-face {
+	font-family: "police2";
+	src:url("../static/font/neuropol.otf") ;
+
+
+}
+

@@ -1,0 +1,20 @@
+<div id="menu-author">
+	<nav>
+		<ul>
+			<li > 	<div class='t1'> Artistes  </div>
+				<ul>
+					{% for author in authorsList %}
+					<li><a href="{{ url_for('index', _external=False) }}author/{{author}}">{{author}}</a></li>
+					{% endfor %}
+				</ul>
+			</li>
+
+
+
+
+
+
+
+		</ul>
+	</nav>
+</div>

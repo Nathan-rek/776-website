@@ -61,6 +61,29 @@ def get_random_image():
     else:
         return 'img/default.png' # Assurez-vous que 'default.png' existe dans 'static/img'
 
+def get_random_article():
+    # Sélectionner un article aléatoire parmi tous les articles publiés
+    articles = [p for p in pages if 'published' in p.meta]
+    if articles:
+        # Sélectionner un article aléatoire
+        random_article = random.choice(articles)
+        # Préparer les informations de l'article pour l'affichage
+        article_info = {
+            'title': random_article.title,
+            'author': random_article.meta.get('author', ''),
+            'published': random_article.meta.get('published', '').strftime('%Y') if random_article.meta.get('published', '') else '',
+            'desc': random_article.meta.get('desc', ''),
+            'cover': random_article.meta.get('cover', 'img/def.jpg')
+        }
+        return article_info
+    # Si aucun article n'a été trouvé, retourner une valeur par défaut
+    return {
+        'title': 'No articles found',
+        'author': '',
+        'published': '',
+        'desc': '',
+        'cover': 'img/default.png'
+    }
 
 
 @app.route('/<path:path>')
@@ -118,7 +141,7 @@ def index():
     latest = sorted(articles, reverse=True, key=lambda p: p.meta['published'])
     catList = Liste_cat()
     authorsList = Liste_authors()
-    return render_template('index.html', articles=latest, catList=catList, authorsList=authorsList, random_image=random_image)
+    return render_template('index.html', articles=latest, catList=catList, authorsList=authorsList, random_image=random_image,)
 
 
 

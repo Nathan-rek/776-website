@@ -3,7 +3,9 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: "776";
-	background-color: white;
+	background-color: #b1b1b1;
+	display: flex;
+	flex-direction: column;
 }
 
 .logo-image {
@@ -13,19 +15,20 @@ html, body {
 }
 
 .logo-image img {
-	width: 560px;
+	width: 640px;
 	height: auto;
+	padding: 10px 0px 20px 0px;
 }
 
 .home-image img {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	object-fit: cover; /* Cela garantit que l'image couvre toute la div sans déborder */
 }
 
 
 .t1 {
-	color: black;
+	color: #2e2e2e;
 	margin: 20px 0;
 	text-align: left;
 	display: flex;
@@ -54,7 +57,7 @@ html, body {
 
 #menu li:hover, #menu-author li:hover {
 	color: rebeccapurple;
-	background-color: #d3d3d3;
+	/*	background-color: #d3d3d3;*/
 }
 
 #menu a, #menu-author a {
@@ -69,7 +72,7 @@ html, body {
 }
 
 #menu a:hover, #menu-author a:hover {
-	color: black;
+	color: #2e2e2e;
 	border-radius: 5px;
 	background-color: white;
 }
@@ -82,6 +85,8 @@ html, body {
 .author-list, .list-ex {
 	width: 450px;
 }
+
+
 
 ul#cat-menu-list {
 	display: flex;
@@ -120,7 +125,7 @@ a {
 
 .wdesc {
 	color: black;
-	border: 1px solid white;
+	/*	border: 1px solid white;*/
 	border-radius: 10px;
 	padding: 2px;
 }
@@ -137,6 +142,7 @@ h2 {
 
 h1 {
 	font-size: 0.9em;
+
 }
 
 h3 {
@@ -147,13 +153,22 @@ h3 {
 	font-size: 3.6em;
 }
 
-footer {
-	background-color: #f8f9fa; /* Couleur de fond du pied de page */
-	padding: 20px; /* Espacement interne */
-	text-align: center; /* Alignement du texte */
-	font-size: 14px; /* Taille de la police */
-	color: #6c757d; /* Couleur du texte */
+.content-container {
+	flex: 1 0 auto; /* Cette propriété permet au conteneur de s'étendre pour remplir l'espace disponible */
+	min-height: 100vh; /* Assure que le conteneur a une hauteur minimale égale à la hauteur de la fenêtre du navigateur */
 }
+
+footer {
+	background-color: #f8f9fa;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 0.6em;
+	color: #6c757d;
+	position: absolute;
+	bottom: 0;
+	width: 100%; /* Ajoutez cette ligne pour que le pied de page prenne toute la largeur de la page */
+}
+
 
 
 @font-face {

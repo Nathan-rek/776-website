@@ -37,6 +37,14 @@
 
 
 			</div>
+	<hr>
+				<hr>
+			<div class="list-work">
+				{% include 'menu-work.html' %}
+			</div>
+
+
+
 			<hr>
 
 
@@ -51,13 +59,15 @@
 			</div>
 			<hr>
 
-			<div class="wimg">
-				{% if page.cover %}
-				<img src="{{ url_for('static', filename='img/' + page.cover) }}"/>
-				{% else %}
-				<img src="{{ url_for('static', filename='img/def.jpg') }}"/>
-				{% endif %}
-			</div>
+			<!--
+<div class="wimg">
+{% if page.cover %}
+<img src="{{ url_for('static', filename='img/' + page.cover) }}"/>
+{% else %}
+<img src="{{ url_for('static', filename='img/def.jpg') }}"/>
+{% endif %}
+</div>
+-->
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 

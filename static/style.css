@@ -177,11 +177,68 @@ footer {
 }
 
 @font-face {
-	font-family: "police2";
+	font-family: "police2"; 
 	src: url("../static/font/neuropol.otf");
 }
 
 @font-face {
 	font-family: "776";
 	src: url("../static/font/Poppins-Regular.otf");
+}
+
+
+@media only screen and (max-width: 480px) {
+	/* Styles spécifiques pour les smartphones */
+	html, body {
+		font-size: 14px; /* Réduire la taille de la police pour une meilleure lisibilité sur les petits écrans */
+	}
+
+	.logo-image img {
+		width: 100%; /* Assure que le logo s'adapte à la largeur de l'écran */
+		padding: 5px 0px 10px 0px; /* Réduire le padding pour une meilleure adaptation */
+	}
+
+	.home-image img {
+		width: 100%; /* Assure que l'image s'adapte à la largeur de l'écran */
+	}
+
+	.t1 {
+		flex-direction: column; /* Change la direction de flex pour une meilleure adaptation sur les petits écrans */
+	}
+
+	#menu ul, #menu-author ul {
+		flex-direction: column; /* Change la direction de flex pour une meilleure adaptation sur les petits écrans */
+	}
+
+	.author-list, .list-ex {
+		width: 100%; /* Assure que les listes s'adaptent à la largeur de l'écran */
+	}
+
+
+	#menu a, #menu-author a {
+		display: block;
+		text-decoration: none;
+		transition-duration: 0.5s;
+	}
+
+
+	.wimg > a {
+		width: 100%; /* Assure que les éléments s'adaptent à la largeur de l'écran */
+	}
+
+	h1, h2, h3 {
+		font-size: 1em; /* Réduire la taille de la police pour une meilleure lisibilité sur les petits écrans */
+	}
+
+	.\33 block {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+
+	footer {
+		font-size: 0.5em; /* Réduire la taille de la police pour une meilleure lisibilité sur les petits écrans */
+	}
+
+	/* Ajoutez d'autres styles spécifiques pour les smartphones ici */
 }
